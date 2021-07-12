@@ -1,39 +1,36 @@
-# Скачки!
+# Horse races!
 
-## Введение
+## Introduction
 
 ![](races_schema.png)
 
-*Рисунок 1*. Схема для задачи (Как бы она выглядела для SQL - базы данных).
+*Figure 1.* Task Schema (How it would look for an SQL database).
 
-Представим, что мы создаем полноценное приложение, которое позволяет планировать расписание скачек. В этом приложении пользователи могут зарегистрироваться как жокеи, вписать свою лошадь, выбрать гонку, в которой хотят принять участие. На Рисунке 1 показано как бы выглядела схема в реляционной базе данных.
+Imagine that you're creating an app for scheduling races. In this app, users register as jockeys, enter their horse, and join a race. Figure 1 shows a schema in a relational database.
 
-БД должна позволить нам ответить на следующие вопросы:
+The database should have answers to the following questions:
 
-*Для лошади ...*
+*For a horse ...*
+1. Which races did this horse run?
+2. Which jockeys rode this horse in a specific race?
 
-1. В каких гонках лошадь принимала участие?
-2. Какие жокеи участвовали в заезде на этой лошади?
+*For a jockey ...*
 
-*Для жокея ...*
+1. In what races did this jockey participated?
+2. Which horses did this jockey ride?
 
-1. В каких гонках участвовал жокей?
-2. На каких лошадях ездил жокей?
-
-*Для гонки ...*
-
-1. Какие жокеи принимали участие в гонке?
-2. Какие лошади принимали участие в гонке?
-
+*For a race ...*
+1. Which jockeys participated in this race?
+2. What horses ran this race?
 
 ## Releases
 
 ### Release 0 (Sequelize RAW Queries)
-Создайте файл с проектом, подключите Sequelize и настройте соединение с базой данных.  
-Напишите все необходимые команды DDL для создания таблиц. Наполните вашу БД данными. Далее пройдите по всем вышеприведенным вопросам и составьте по каждому запрос к БД. Эти запросы должны выдавать соответствующие ответы. Таким образом вы сможете проверить себя и исправить вашу БД, если в ней обнаружатся ошибки.
+
+Create a file, connect Sequelize and connect it to the database.
+Create tables using DDL commands and fill your database with data. Next, go through the above questions and make a database request for each; each query should return the correct response to the corresponding question. In doing so, you can check yourself and correct your database accordingly.
 
 ### Release 1 (Sequelize Models)
-
-Теперь напишите модели, используя Sequelize-cli. Далее выполните то же самое, что делали в Релизе 0: 
-- Наполните вашу БД данными, можете использовать для этого [faker](https://www.npmjs.com/package/faker). 
-- Пройдите по всем вышеприведенным вопросам и составьте по каждому запрос к БД.
+Now write models using Sequelize-cli. Next, repeat Release 0 with these new models:
+- Fill your database with data ([faker](https://www.npmjs.com/package/faker) may be helpful)
+- Create a database query for each question.
