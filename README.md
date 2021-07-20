@@ -32,5 +32,5 @@ Create tables using DDL commands and fill your database with data. Next, go thro
 
 ### Release 1 (Sequelize Models)
 Now write models using Sequelize-cli. Next, repeat Release 0 with these new models:
-- Fill your database with data ([faker](https://www.npmjs.com/package/faker) may be helpful)
+- Fill your database with data (you may use sequelize-cli seeding from the documentation, or optionally, try [faker](https://www.npmjs.com/package/faker))
 - Create a database query for each question.
